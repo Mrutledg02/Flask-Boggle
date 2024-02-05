@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Boggle Game</h1>
+
+        <!-- Display the Boggle board as a grid -->
+        <div id="board-container">
+            <table id="boggle-board">
+                {% for row in board %}
+                    <tr>
+                        {% for letter in row %}
+                            <td class="board-cell">{{ letter }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <!-- Form for submitting guesses -->
+        <form id="word-form">
+            <label for="word">Enter a word:</label>
+            <input type="text" id="word" name="word" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Display result message -->
+        <div id="result-message" class="result-message"></div>
+
+        <!-- Display the current score -->
+        <div id="current-score" class="current-score"></div>
+
+        <div id="timer" class="timer"></div>
+
+        <!-- Display games played and highest score -->
+        <div id="games-statistics" class="games-statistics">
+            <div>Number of times played: {{ session['num_played'] }}</div>
+            <div>Highest score: {{ session['highest_score'] }}</div>
+        </div>
+    </div>
+
+    <!-- Add your JavaScript script tag here -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- set_board_size.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Board Size</title>
+</head>
+<body>
+    <h1>Boggle Game</h1>
+
+    <form method="post" action="{{ url_for('set_board_size') }}">
+        <label for="board_size">Enter the size of the Boggle board:</label>
+        <input type="number" id="board_size" name="board_size" required min="3" max="10">
+        <button type="submit">Set Board Size</button>
+    </form>
+</body>
+</html>

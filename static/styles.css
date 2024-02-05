@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+#board-container {
+    margin-top: 20px;
+}
+
+#boggle-board {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.board-cell {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#word-form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.result-message {
+    display: none; /* Hide the result message initially */
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffee58;
+    color: #333333;
+}
+
+.current-score,
+.timer {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+.games-statistics {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #9c27b0;
+}
